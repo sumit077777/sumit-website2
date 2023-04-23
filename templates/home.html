@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+  <html>
+    <head> <title>sumit's portfolio</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+  rel="stylesheet"
+/>
+      <style>
+        img{
+          border-radius:100%;
+        }
+     
+        .navbar{
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            margin-bottom: 2px;
+            text-align:center;
+            padding:10px;
+            overflow: hidden;
+            font-color:#D63513;
+        
+          
+        }
+        .navbar a{
+          text-decoration: none;
+           font-color:#D63513;
+          padding-left: 40px;
+          margin-top:30px;
+          font-size:20px;
+          font-family: 'Castoro Titling', cursive;
+          
+          
+          
+        }
+        #home{
+          margin-left:800px
+        }
+        h1{
+            text-align: center;
+          font-family: 'Castoro Titling', cursive;
+          
+          
+        }
+        .box{
+          height: 300px;
+          width:615px;
+          border:1px;
+          border-color:black;
+          margin-left:500px;
+          margin-top:50px;
+          font-family: 'Castoro Titling', cursive;
+          font-size:20px;
+        }
+        #myphoto{
+          position:absolute;
+          margin-left:100px;
+          margin-top:50px;
+        }
+        #logo{
+          position:fixed;
+        margin-top:0px;
+        background: transparent;
+        }
+        body{
+          background-image:url('static/background.jpg');
+        }
+        hr{
+          margin-top:120px;
+        
+      h6{
+          font-family: 'Castoro Titling', cursive;
+          font-size:10px;
+        font-color:red;
+      }
+          
+      </style>
+    </head>
+    <body>
+    
+        
+      <img id ="logo"src='static/logo.png' height=10% width=10% align="top">
+      <div class="navbar">
+        <a id="home" href="#">Home</a>
+        <a href ="#">Contact</a>
+        <a href="#">Projects</a>
+        <a href="#">Resume</a>
+        <a href="#">Blogs</a>
+      </div>
+        
+      <h1>Welcome to my E-portfolio</h1>
+      <img class='img-fluid'  id="myphoto"src="https://sumitportfolio.sumitchauhan22.repl.co/static/portphoto.jpg" width=300px height=300px>
+     
+        <div class="box">
+        <h2>Sumit Chauhan</h2>
+        <p>I am an aspiring data analyst with a passion for turning complex data into actionable insights. As a data enthusiast, I enjoy diving into large datasets, extracting meaningful information, and presenting it in a way that is easy to understand. My analytical skills are complemented by my strong technical abilities. I am proficient in a variety of programming languages, including Python and have experience working with SQL and data visualization tools such as Tableau and Power BI. I also have experience in statistical analysis, data mining, and machine learning.
+</p>
+<button type="button" class="btn btn-primary btn-lg">Learn More</button>
+<button type="button" class="btn btn-secondary btn-lg">Hire Me</button>
+          
+
+        
+</div>
+      <hr> </hr>
+      <h6 style="font-family: 'Castoro Titling', cursive;">follow me on:
+<!-- Facebook -->
+<i class="fab fa-facebook-f fa-1x" style="color: #3b5998;"></i>
+
+<!-- Twitter -->
+<i class="fab fa-twitter fa-1x" style="color: #55acee;"></i>
+
+<!-- Instagram -->
+<i class="fab fa-instagram fa-1x" style="color: #ac2bac;"></i>
+
+<!-- Linkedin -->
+<i class="fab fa-linkedin-in fa-1x" style="color: #0082ca;"></i>
+
+
+
+<!-- Youtube -->
+<i class="fab fa-youtube fa-1x" style="color: #ed302f;"></i>
+
+>
+
+<!-- Github -->
+<i class="fab fa-github fa-1x" style="color: #333333;"></i>
+
+
+<!-- Whatsapp -->
+<i class="fab fa-whatsapp fa-1x" style="color: #25d366;font-family: 'Castoro Titling', cursive;"></i>
+      </h6>
+        <h6 style="font-family: 'Castoro Titling', cursive; margin-bottom:20px">Email:sumitchauhan07777@gmail.com</h6>
+      <div>
+        {% for job in jobs %}
+       {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+    
+    </body>
+  </html>
