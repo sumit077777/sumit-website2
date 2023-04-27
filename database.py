@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, text
 import os
 
 engine = create_engine(
-  "mysql+pymysql://s7odw3kg7ygrove8uvpo:pscale_pw_SwiBSXr249d2R8Dvvx51uKif0OMLQbEicu5QMHaeVvA@aws.connect.psdb.cloud/sumit?charset=utf8mb4",
+  "mysql+pymysql://waqtnv7dzuhux3fb5o3d:pscale_pw_PzXXtbvQXafgKdH3rybUg46GvYOrCuHW6P3m7gHT4Ns@aws.connect.psdb.cloud/sumit?charset=utf8mb4",
   connect_args={"ssl": {
     "ssl_ca": "/etc/ssl/cert.pem"
   }},
