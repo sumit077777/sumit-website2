@@ -18,6 +18,13 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
   rel="stylesheet"
 />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nova+Slim&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+  
       <style>
         img{
           border-radius:100%;
@@ -42,7 +49,7 @@
           padding-left: 40px;
           margin-top:5px;
           font-size:20px;
-          font-family: 'Castoro Titling', cursive;
+font-family: 'Nova Slim', cursive;
           
           
           
@@ -52,7 +59,7 @@
         }
         h1{
           text-align: center;
-          font-family: 'Castoro Titling', cursive;
+          font-family: 'Nova Slim', cursive;
           margin-top:20px;
           
         }
@@ -63,7 +70,8 @@
           border-color:black;
           margin-left:500px;
           margin-top:30px;
-          font-family: 'Castoro Titling', cursive;
+         font-family: 'EB Garamond', serif;
+font-family: 'Nanum Myeongjo', serif;
           font-size:20px;
         }
         #myphoto{
@@ -83,10 +91,14 @@
           margin-top:120px;
         
       h6{
-          font-family: 'Castoro Titling', cursive;
+           font-family: 'Nova Slim', cursive;
           font-size:10px;
         font-color:red;
       }
+         #footer{
+            margin-top:100px;
+          }
+        
           
       </style>
     </head>
@@ -95,11 +107,11 @@
         
       <img id ="logo"src='static/logo.png' height=9% width=10% align="top">
       <div class="navbar">
-        <a id="home" href="#">Home</a>
-        <a href ="#">Contact</a>
-        <a href="#">Projects</a>
-        <a href="#">Resume</a>
-        <a href="#">Blogs</a>
+        <a id="home" href="{{url_for('hello_world')}}">Home</a>
+        <a href ="{{url_for('contact_page')}}">Contact</a>
+        <a href="{{url_for('projects_page')}}">Projects</a>
+        <a href="{{url_for('resume_page')}}">Resume</a>
+        <a href="{{url_for('blogs_page')}}">Blogs</a>
       </div>
         
       <h1>Welcome to my E-portfolio</h1>
@@ -109,14 +121,21 @@
         <h2>Sumit Chauhan</h2>
         <p>I am an aspiring data analyst with a passion for turning complex data into actionable insights. As a data enthusiast, I enjoy diving into large datasets, extracting meaningful information, and presenting it in a way that is easy to understand. My analytical skills are complemented by my strong technical abilities. I am proficient in a variety of programming languages, including Python and have experience working with SQL and data visualization tools such as Tableau and Power BI. I also have experience in statistical analysis, data mining, and machine learning.
 </p>
-<button type="button" class="btn btn-primary btn-lg">Learn More</button>
-<button type="button" class="btn btn-secondary btn-lg">Hire Me</button>
+<a href="https://www.linkedin.com/in/sumit-chauhan-14b4a7180/"><button type="button" class="btn btn-primary btn-lg">LinkedIn</button></a>
+<a href="mailto:sumitchauhan07777@gmail.com">
+<button type="button" class="btn btn-secondary btn-lg">Hire Me</button></a>
           
-
-        
-</div>
-      <hr> </hr>
-      <h6 style="font-family: 'Castoro Titling', cursive;">follow me on:
+  
+ </div>
+      <Br>
+      <br>
+      
+      <div class="footer">
+        <hr>
+    <footer>  
+     
+       
+      <h6 style="font-family: 'Nova Slim', cursive;">follow me on:
 <!-- Facebook -->
 <i class="fab fa-facebook-f fa-1x" style="color: #3b5998;"></i>
 
@@ -134,21 +153,17 @@
 <!-- Youtube -->
 <i class="fab fa-youtube fa-1x" style="color: #ed302f;"></i>
 
->
+
 
 <!-- Github -->
 <i class="fab fa-github fa-1x" style="color: #333333;"></i>
 
 
-<!-- Whatsapp -->
-<i class="fab fa-whatsapp fa-1x" style="color: #25d366;font-family: 'Castoro Titling', cursive;"></i>
+<i class="fab fa-whatsapp fa-1x" style="color: #25d366;font-family: 'Nova Slim', cursive;"></i>
       </h6>
-        <h6 style="font-family: 'Castoro Titling', cursive; margin-bottom:20px">Email:sumitchauhan07777@gmail.com</h6>
-      <div>
-        {% for job in jobs %}
-       {% include 'jobitem.html' %}
-        {% endfor %}
-      </div>
+        <h6 style=" font-family: 'Nova Slim', cursive; margin-bottom:20px">Email:sumitchauhan07777@gmail.com</h6>
     
+     </footer>  
+      </div>
     </body>
   </html>

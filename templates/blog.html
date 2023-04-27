@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+  rel="stylesheet"
+  
+/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nova+Slim&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  
+   <style>
+      h1{
+          text-align: center;
+         font-family: 'Nova Slim', cursive;
+          margin-top:20px;
+        margin-bottom:20px;
+          
+        }
+ 
+      .navbar{
+            background: transparent;
+            height: 60px;
+            width: 100%;
+            position: static;
+            margin-bottom: 2px;
+            text-align:center;
+            padding:10px;
+            overflow: hidden;
+            font-color:#D63513;
+        
+          
+        }
+     #home{
+          margin-left:800px
+        }
+        .navbar a{
+          text-decoration: none;
+          font-color:#D63513;
+          padding-left: 20px;
+          margin-top:5px;
+          font-size:20px;
+         font-family: 'Nova Slim', cursive;
+          text-align:center;
+          
+        
+        }
+      #logo{
+        position:absolute;
+        margin-top:0px;
+        bac
+    }
+     #bgimg{
+       position:fixed;
+       width:1000px;
+       height:700px;
+       opacity:0.08;
+     }
+  h3{
+      font-family: 'Nova Slim', cursive;
+      font-size:20px;
+    
+  }
+     .box1{
+            font-size: 40px;
+            border: 1px;
+            border-color: black;
+            box-shadow: 0px;
+            width: 350px;
+            height: 480px;
+            color: rgb(17, 21, 21);
+            margin-left: 10px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 1px 1px 1px 1px silver;
+            border-radius: 5px;
+            margin-bottom: 2px;
+        font-family: 'EB Garamond', serif;
+font-family: 'Nanum Myeongjo', serif;
+        }
+     body{
+       background-image:url("/static/project.jpg");
+       
+     }
+    
+     p{
+       font-size: 13px;
+       font-family: 'Nunito', sans-serif;
+       margin-left:5px;
+       margin-right:5px;
+       
+          
+     }
+     .margin{
+       margin-right:40px;
+     }
+   </style>
+  </head>
+  <body>
+     <img id ="logo"src='static/logo.png' height=9% width=10% align="top">
+      <div class="navbar">
+         <a id="home" href="{{url_for('hello_world')}}">Home</a>
+        <a href ="#">Contact</a>
+        <a href="{{url_for('projects_page')}}">Projects</a>
+        <a href="{{url_for('resume_page')}}">Resume</a>
+         <a href="{{url_for('blogs_page')}}">Blogs</a>
+      </div>
+     <img  id="bgimg" src="/static/projectbg.jpg">
+    <h1> My Blogs</h1>
+  
+     
+       <table>
+         <tr>
+           <td>
+             <div class="margin">
+               
+             </div>
+           </td>
+        
+      {% for blog in blogs %}
+          <td>
+        <div class="box1">
+        <h3><b>  {{blog['title']}}</b></h3>
+        
+
+                    <hr>
+                    <h4 style="font-size: 10px;">
+                        <i><b>Written by sumit chauhan</b></i>  <br>
+                        <i><b>date:</i>{{blog['date_time']}}</b></i>
+                        <hr>
+                    <p>{{blog['content']}}</p>
+                    
+          
+                       
+                </div>
+           </td>
+        {% endfor %}
+       </td>
+          </tr>
+       </table>
+    
+      </div>
+     <hr> </hr>     
+ <footer>  
+</div>
+    
+       <hr> </hr>
+      <h6 style="font-family: 'Nova Slim', cursive;">follow me on:
+<!-- Facebook -->
+<i class="fab fa-facebook-f fa-1x" style="color: #3b5998;"></i>
+
+<!-- Twitter -->
+<i class="fab fa-twitter fa-1x" style="color: #55acee;"></i>
+
+<!-- Instagram -->
+<i class="fab fa-instagram fa-1x" style="color: #ac2bac;"></i>
+
+<!-- Linkedin -->
+<i class="fab fa-linkedin-in fa-1x" style="color: #0082ca;"></i>
+
+
+
+<!-- Youtube -->
+<i class="fab fa-youtube fa-1x" style="color: #ed302f;"></i>
+
+
+
+<!-- Github -->
+<i class="fab fa-github fa-1x" style="color: #333333;"></i>
+
+
+<i class="fab fa-whatsapp fa-1x" style="color: #25d366;font-family: 'Nova Slim', cursive;"></i>
+      </h6>
+        <h6 style=" font-family: 'Nova Slim', cursive; margin-bottom:20px">Email:sumitchauhan07777@gmail.com</h6>
+     </footer>  
+  </body>
+</html>
