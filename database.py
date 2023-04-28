@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine, text
-import os
+
 
 engine = create_engine(
-  "mysql+pymysql://0dcswrabcsuy0fwp1wnq:pscale_pw_WbPdvk3tjkFWgm7trVDshoWs6BiM06nEUMWOvFRYSTW@aws.connect.psdb.cloud/sumit?charset=utf8mb4",
+  "mysql+pymysql://py2amz5d2w6x1ha0s0ls:pscale_pw_9xz1R8r8K0wBaQHMJclgZ5nlG9XchyN64yTmzbkrolz@aws.connect.psdb.cloud/sumit?charset=utf8mb4",
   connect_args={"ssl": {
     "ssl_ca": "/etc/ssl/cert.pem"
   }},
