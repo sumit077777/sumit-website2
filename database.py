@@ -1,18 +1,22 @@
 from sqlalchemy import create_engine, text
+import os
 
+i = 0
+for key, value in os.environ.items():
+  s = value
+  if (i == 0):
+    break
 
-engine = create_engine(
-  "mysql+pymysql://py2amz5d2w6x1ha0s0ls:pscale_pw_9xz1R8r8K0wBaQHMJclgZ5nlG9XchyN64yTmzbkrolz@aws.connect.psdb.cloud/sumit?charset=utf8mb4",
-  connect_args={"ssl": {
-    "ssl_ca": "/etc/ssl/cert.pem"
-  }},
-  pool_pre_ping=True)
+engine = create_engine(s,
+                       connect_args={"ssl": {
+                         "ssl_ca": "/etc/ssl/cert.pem"
+                       }},
+                       pool_pre_ping=True)
 with engine.connect() as conn:
   result = conn.execute(text("select * from projects"))
   projects = []
 for u in result.all():
   projects.append(u._asdict())
-print(projects)
 
 
 def add_contact_to_db(data):
