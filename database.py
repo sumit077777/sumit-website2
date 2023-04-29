@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, text
 import os
 
+z = 0
 i = 0
 for key, value in os.environ.items():
   s = value
