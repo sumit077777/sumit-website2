@@ -3,10 +3,7 @@ import os
 
 z = 0
 i = 0
-for key, value in os.environ.items():
-  s = value
-  if (i == 0):
-    break
+s = os.environ['DB_CONNECTION_STRING']
 
 engine = create_engine(s,
                        connect_args={"ssl": {
